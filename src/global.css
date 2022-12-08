@@ -21,7 +21,7 @@ main {
   align-items: center;
 }
 
-div {
+.login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,7 +104,7 @@ button#btnEnter {
     width: 90%;
   }
 
-  div {
+  .login-container {
     width: 80%;
   }
 

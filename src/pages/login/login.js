@@ -9,6 +9,7 @@ import { redirect } from '../../redirect.js';
 
 export const mainLogin = () => {
   const printElements = document.createElement('div');
+  printElements.classList.add('login-container');
   printElements.innerHTML = `
     <div class='logo'>
     <img src="./../img/Logo.png" alt="logo borboleta">

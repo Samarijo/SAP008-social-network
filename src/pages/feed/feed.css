@@ -1,0 +1,16 @@
+.input-post {
+    border-radius: 4px;
+    background-color: #D1B39F;
+    width: 90%;
+    min-height: 100px;
+    display:block;
+    margin:0 auto;
+    resize: none;
+}
+
+.template-post {
+    border-radius: 4px;
+    background-color: #D1B39F;
+    margin-top: 5px;
+
+}

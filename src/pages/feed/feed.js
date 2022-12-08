@@ -37,7 +37,7 @@ export const mainFeed = async () => {
   sectionCreatePost.innerHTML = `
     <p>Olá, ${auth.currentUser.displayName}!
     <label class="feed-post" for="feed-post">Publique aqui:</label>
-    <input class="input-post" type="text"/>
+    <textarea class="input-post"></textarea>
     <p class="msg-error"></p>
     <button class="btn-post" type="button">Publicar</button>
     <a href="#login">
