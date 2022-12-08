@@ -14,10 +14,20 @@ import { validatePost } from '../../validations.js';
 const sectionCreatePost = document.createElement('section');
 
 const timeline = (arrPosts) => {
-  console.log(arrPosts);
   const feedPostContainer = sectionCreatePost.querySelector('.feed');
   const postsTemplate = arrPosts.map((post) => `
-    <div>${post.tip}</div>
+  <div class="template-post">
+  <div class="post-author">
+    <span>${auth.currentUser.displayName}</span>
+  </div>
+  <article class="post-text">
+     ${post.tip}
+  </article>
+  <div class="btn-actions">
+    <button class="post-button like">🖤</button>
+    <button class="post-button delete">🗑️</button>
+  </div>
+  </div>
   `).join('');
   feedPostContainer.innerHTML = postsTemplate;
 };
@@ -25,14 +35,14 @@ const timeline = (arrPosts) => {
 export const mainFeed = async () => {
   sectionCreatePost.setAttribute('id', 'feed');
   sectionCreatePost.innerHTML = `
-  <a href="#login">
-    <button class="btn-return" type="button">Sair</button>
-  </a>
     <p>Olá, ${auth.currentUser.displayName}!
     <label class="feed-post" for="feed-post">Publique aqui:</label>
     <input class="input-post" type="text"/>
     <p class="msg-error"></p>
     <button class="btn-post" type="button">Publicar</button>
+    <a href="#login">
+    <button class="btn-return" type="button">Sair</button>
+  </a>
     <section class="feed"></section>    
   `;
 
